@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SpaceShipController.cs" />
+    <Compile Include="Assets\Scripts\LaserPrefab.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

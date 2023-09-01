@@ -7,6 +7,8 @@ public class SpaceShipController : MonoBehaviour
     private float _speedX = 5f;
     private float _speedY = 5f;
 
+    public GameObject prefabLaser;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,5 +48,27 @@ public class SpaceShipController : MonoBehaviour
         print($"V: {v}");
 
         transform.Translate(h*_speedX*Time.deltaTime,v*_speedY* Time.deltaTime, 0);
+
+        Instantiate(prefabLaser, transform.position + new Vector3(0,1,0), transform.rotation);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        //Destroy(other.gameObject);
+    }
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        print("A colisão está acontecendo: stay");
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        print("A colisão deixou de acontecer: exit");
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        print("Trigger enter!");
     }
 }
