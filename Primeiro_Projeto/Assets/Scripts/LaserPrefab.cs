@@ -6,15 +6,26 @@ public class LaserPrefab : MonoBehaviour
 {
 
     private float _speedY = 15f;
+
+    private Rigidbody2D _rb2d;
     
     void Start()
     {
-        
+        Destroy(this.gameObject, 0.7f);
+        _rb2d = GetComponent<Rigidbody2D>();
     }
 
-    
-    void Update()
+    private void FixedUpdate()
     {
-        transform.Translate(0,_speedY * Time.deltaTime,0);
+        _rb2d.MovePosition(_rb2d.position+new Vector2(0, _speedY)*Time.deltaTime);   
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("inimigo"))
+        {
+            Destroy(this.gameObject);
+            Destroy(other.gameObject);
+        }
     }
 }
