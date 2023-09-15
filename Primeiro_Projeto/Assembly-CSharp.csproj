@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\LaserPrefab.cs" />
     <Compile Include="Assets\Scripts\SpaceShipController.cs" />
+    <Compile Include="Assets\Scripts\InimigoController.cs" />
+    <Compile Include="Assets\Scripts\GerenciadorInimigos.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
