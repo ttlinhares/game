@@ -10,7 +10,6 @@ public class GerenciadorInimigos : MonoBehaviour
 
     [SerializeField]
     private float maxTime = 1;
-    private float shotTime = 0.5f;
     private float timeIcre = 0;
 
     void Update()

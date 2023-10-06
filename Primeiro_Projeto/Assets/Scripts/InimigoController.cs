@@ -67,7 +67,7 @@ public class InimigoController : MonoBehaviour
         void Atirar()
         {
 
-            Instantiate(prefabLaser, transform.position + new Vector3(0, 2, 0), transform.rotation);
+            Instantiate(prefabLaser, transform.position + new Vector3(0, -2, 0), transform.rotation);
         }
 
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SpaceShipController : MonoBehaviour
@@ -9,6 +10,9 @@ public class SpaceShipController : MonoBehaviour
 
     private Rigidbody2D _rb2d;
     public GameObject prefabLaser;
+    public TextMeshProUGUI textoScore;
+
+    public static int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +40,13 @@ public class SpaceShipController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        _rb2d.MovePosition(_rb2d.position + new Vector2(_h,_v)*_speed*Time.deltaTime);
+        _rb2d.MovePosition(_rb2d.position + new Vector2(_h, _v) * _speed * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
         //Destroy(other.gameObject);
+        
     }
 
     void OnCollisionStay2D(Collision2D other)
