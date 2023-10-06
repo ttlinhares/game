@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: c48d7bc7ca7cd4e439f2509a9e0b6c4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -126,6 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: -8
+  prefabLaser: {fileID: 4162512326601164728, guid: d2e7487e0a6932c4fb3919ea26796667, type: 3}
+  firePoint: {fileID: 8110717984155032702}
+  fireRate: 1
 --- !u!50 &8110717984155032700
 Rigidbody2D:
   serializedVersion: 4

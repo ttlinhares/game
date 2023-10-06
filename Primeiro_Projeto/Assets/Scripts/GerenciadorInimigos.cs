@@ -6,8 +6,11 @@ public class GerenciadorInimigos : MonoBehaviour
 {
     [SerializeField]
     private GameObject prefabInimigo;
+    private GameObject prefabLaser;
+
     [SerializeField]
     private float maxTime = 1;
+    private float shotTime = 0.5f;
     private float timeIcre = 0;
 
     void Update()
@@ -15,9 +18,12 @@ public class GerenciadorInimigos : MonoBehaviour
         timeIcre += Time.deltaTime;
         if(timeIcre >= maxTime)
         {
-            var x = Random.Range(-10.8f, 10.9f);
+            var x = Random.Range(-9f, 9f);
             Instantiate(prefabInimigo, new Vector2(x, 6.3f), transform.rotation);
-            timeIcre= 0;
+            
+            timeIcre = 0;
+
+
         }
     }
 }
